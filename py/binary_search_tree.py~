@@ -1,0 +1,19 @@
+#!/usr/bin/python2.7 -tt
+
+"""
+Binary Search Tree Operations
+"""
+
+def find_recursive(key, node, index):
+    try:
+        value = node[index]
+    except:
+        return
+
+    if value == key:
+        #found match
+    elif key < value:
+        return find_recursive( key, node, index -=1 ) 
+    else:
+        return find_recursive( key, node, index +=1 ) 
+
